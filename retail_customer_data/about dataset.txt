@@ -1,0 +1,105 @@
+Overview
+This dataset contains fictional or sample retail data gathered from various sources within a retail business environment. It comprises multiple CSV files that capture customer demographics, purchase transactions, marketing campaign details, customer reviews, support tickets, and other interaction logs.
+
+The primary goal of this dataset is to facilitate exploratory data analysis, data mining, machine learning projects, or general data science practice with a realistic but controlled dataset.
+
+Note: All data here is either fictitious or anonymized. Any resemblance to real people, products, or companies is purely coincidental.
+
+File Descriptions
+customers.csv
+Contains demographic and basic registration information about each customer.
+
+customer_id (int or string): Unique identifier for each customer.
+full_name (string): Full name of the customer.
+age (int): Age of the customer.
+gender (string): Gender of the customer (e.g., “Male”, “Female”, “Other”).
+email (string): Email address.
+phone (string): Phone number.
+street_address (string): Street address.
+city (string): City of residence.
+state (string): State of residence.
+zip_code (string): Zip code/postal code.
+registration_date (date): Date the customer registered.
+preferred_channel (string): Preferred communication channel (e.g., “Email”, “SMS”, “Phone”).
+transactions.csv
+Includes purchase information for products bought by customers.
+
+transaction_id (int): Unique ID for each transaction.
+customer_id (int or string): Links to customer_id in customers.csv.
+product_name (string): Name of the purchased product.
+product_category (string): Category or classification of the product.
+quantity (int): Number of units purchased in this transaction.
+price (float): Price per unit of the product.
+transaction_date (date): Date when the transaction was completed.
+store_location (string): Physical store location or “Online” if purchased via e-commerce.
+payment_method (string): Payment method (e.g., “Credit Card”, “PayPal”, “Cash”).
+discount_applied (float or int): Discount amount or percentage applied (if any).
+interactions.csv
+Captures various interactions the customer has with the company’s digital channels.
+
+interaction_id (int): Unique ID for each interaction.
+customer_id (int or string): Links to customer_id in customers.csv.
+channel (string): Channel of interaction (e.g., “Website”, “Mobile App”, “Social Media”).
+interaction_type (string): Type of interaction (e.g., “View Product”, “Add to Cart”, “Click Ad”).
+interaction_date (date): Date of the interaction.
+duration (int or float): Duration of interaction in seconds or minutes.
+page_or_product (string): Page visited or product name related to the interaction.
+session_id (string): Session identifier to track multiple actions within one session.
+campaigns.csv
+Details about marketing or advertising campaigns.
+
+campaign_id (int): Unique campaign identifier.
+campaign_name (string): Name or title of the campaign.
+campaign_type (string): Type of campaign (e.g., “Email”, “Social Media”, “TV Ad”).
+start_date (date): Launch date of the campaign.
+end_date (date): Completion date of the campaign.
+target_segment (string): Target audience or segment (e.g., “Loyal Customers”, “New Registrations”).
+budget (float): Allocated budget for the campaign.
+impressions (int): Number of impressions generated (for digital campaigns).
+clicks (int): Number of clicks (if applicable).
+conversions (int): Number of desired conversions (e.g., sign-ups, purchases).
+conversion_rate (float): Percentage of impressions that resulted in conversions.
+roi (float): Return on investment for the campaign.
+customer_reviews_complete.csv
+Collection of product reviews submitted by customers post-purchase.
+
+review_id (int): Unique identifier for each review.
+customer_id (int or string): Links to customer_id in customers.csv.
+product_name (string): Name of the product reviewed.
+product_category (string): Category of the product reviewed.
+full_name (string): Name of the customer (could be anonymized).
+transaction_date (date): Date of the transaction related to this review.
+review_date (date): Date the review was posted.
+rating (int): Rating given by the customer (e.g., 1 to 5 stars).
+review_title (string): Short title or summary of the review.
+review_text (string): Full text of the customer’s review.
+support_tickets.csv
+Tracks customer support interactions and resolution details.
+
+ticket_id (int): Unique ID for each support ticket.
+customer_id (int or string): Links to customer_id in customers.csv.
+issue_category (string): General category of the issue (e.g., “Billing”, “Product Defect”, “Returns”).
+priority (string): Priority level (“Low”, “Medium”, “High”).
+submission_date (date): Date the ticket was submitted.
+resolution_date (date): Date the ticket was resolved (if applicable).
+resolution_status (string): Status of the ticket (“Open”, “Closed”, “Pending”, etc.).
+resolution_time_hours (float): Time (in hours) taken to resolve the issue.
+customer_satisfaction_score (int or float): Satisfaction rating after resolution (e.g., 1–5).
+notes (string): Additional notes or remarks from the support agent.
+How to Use This Dataset
+Data Analysis & Modeling: Use customers.csv and transactions.csv to understand purchase behavior, customer demographics, and possible purchasing patterns.
+Marketing & Campaign Effectiveness: Combine transactions.csv with campaigns.csv to evaluate campaign ROI, conversion rates, and budget efficiency.
+Customer Journey & Interaction: Merge interactions.csv with customers.csv to analyze user engagement across different channels and interactions.
+Customer Feedback & Sentiment Analysis: Leverage customer_reviews_complete.csv to perform sentiment analysis or text mining on product reviews.
+Customer Support Analysis: Use support_tickets.csv to examine response times, issue types, and satisfaction scores.
+You can join tables using the customer_id field across most files.
+
+Data Quality & Assumptions
+This dataset may contain null/empty values in certain columns (e.g., missing phone numbers, or unknown discount amounts).
+Dates are in a consistent format (e.g., YYYY-MM-DD), but make sure to parse them correctly in your data analysis tools.
+The currency for monetary fields (e.g., price, budget, roi) is unspecified/fictitious. Feel free to assume USD or another currency for demonstration.
+All personal information is fictitious, ensuring that no real customer data or personally identifiable information (PII) is exposed.
+Limitations & Disclaimers
+This dataset is for educational, research, and demonstration purposes only.
+No warranty of accuracy or completeness is provided.
+By using this dataset, you agree to handle any personally identifying information (like email or phone fields) responsibly if present. Consider anonymizing or removing columns that might raise privacy concerns.
